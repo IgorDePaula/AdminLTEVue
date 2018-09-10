@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "vue": "^2.5.17"
@@ -24,7 +26,8 @@
     "babel-jest": "^23.0.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "vuepress": "^0.14.2"
   },
   "eslintConfig": {
     "root": true,
@@ -51,6 +54,15 @@
     "not ie <= 8"
   ],
   "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageDirectory": "tests/coverage",
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ],
+    "notify": true,
+    "notifyMode": "always",
     "moduleFileExtensions": [
       "js",
       "jsx",
