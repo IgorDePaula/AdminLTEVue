@@ -1,20 +1,19 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
-    <lte-button :social="true" social-network="bitbucket">Login with bitbucket</lte-button>
+
+    <lte-action-button :type="'warning'" title="care" :itens="[]"></lte-action-button>
   </div>
 
 </template>
 
 <script>
-import LteButton from './components/Button/Button'
-import LteIcon from './components/Icon'
-import LteButtonGroup from './components/Button/ButtonGroup'
+import LteActionButton from './components/Button/ActionButton'
 
 export default {
   name: 'app',
   components: {
-    LteButton
+    LteActionButton
   }
 }
 </script>

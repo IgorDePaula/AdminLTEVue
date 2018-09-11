@@ -37,6 +37,9 @@ export default {
     },
     app: {
       type: Boolean
+    },
+    dropdown: {
+      type: Boolean
     }
   },
   render (h) {
@@ -47,6 +50,9 @@ export default {
     const content = [this.$slots.default]
     if (this.type) {
       props.class.push(`btn-${this.type}`)
+    }
+    if (this.dropdown) {
+      props.class.push('dropdown-toggle')
     }
     if (this.block) {
       props.class.push('btn-block')
