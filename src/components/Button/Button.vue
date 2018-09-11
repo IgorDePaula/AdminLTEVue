@@ -1,3 +1,4 @@
+<script>
 import typeValidator from '../../mixins/typeValidator'
 import sizeValidator from '../../mixins/sizeValidator'
 import bgValidator from '../../mixins/bgValidator'
@@ -35,9 +36,9 @@ export default {
     props.class = []
     props.on = this.$listeners
     const content = [this.$slots.default]
-    if (this.type) {
-      props.class.push(`btn-${this.type}`)
-    }
+   this.type ?
+      props.class.push(`btn-${this.type}`) : props.class.push(`btn-default`)
+
     if (this.block) {
       props.class.push('btn-block')
     }
@@ -51,7 +52,7 @@ export default {
       props.class.push('btn-flat')
     }
     if (this.disabled) {
-      props.class.push('btn-disabled')
+      props.class.push('disabled')
     }
     if (this.app) {
       props.class.push('btn-app')
@@ -60,3 +61,18 @@ export default {
     return h('button', props, content)
   }
 }
+
+</script>
+
+<style scoped lang="less">
+
+    @import "../../assets/css/bootstrap/bootstrap.less";
+    @import "../../assets/css/skins/_all-skins.less";
+    @import "../../assets/css/font-awesome/less/font-awesome.less";
+    @import "../../assets/css/bootstrap/mixins.less";
+    @import "../../assets/css/bootstrap/variables.less";
+    @import "../../assets/css/variables.less";
+    @import "../../assets/css/core.less";
+    @import "../../assets/css/mixins.less";
+@import '../../assets/css/buttons';
+</style>
