@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
+    <lte-button :social="true" social-network="bitbucket">Login with bitbucket</lte-button>
   </div>
+
 </template>
 
 <script>
@@ -12,6 +14,7 @@ import LteButtonGroup from './components/Button/ButtonGroup'
 export default {
   name: 'app',
   components: {
+    LteButton
   }
 }
 </script>

@@ -2,6 +2,8 @@
 import typeValidator from '../../mixins/typeValidator'
 import sizeValidator from '../../mixins/sizeValidator'
 import bgValidator from '../../mixins/bgValidator'
+import socialnetworkValidator from '../../mixins/socialnetworkValidator'
+import LteIcon from '../Icon'
 export default {
   name: 'LteButton',
   props: {
@@ -26,6 +28,13 @@ export default {
       type: String,
       validator: bgValidator
     },
+    social:{
+      type: Boolean
+    },
+    socialNetwork: {
+      type: String,
+      validator: socialnetworkValidator
+    },
     app: {
       type: Boolean
     }
@@ -36,9 +45,9 @@ export default {
     props.class = []
     props.on = this.$listeners
     const content = [this.$slots.default]
-   this.type ?
-      props.class.push(`btn-${this.type}`) : props.class.push(`btn-default`)
-
+    if (this.type) {
+      props.class.push(`btn-${this.type}`)
+    }
     if (this.block) {
       props.class.push('btn-block')
     }
@@ -53,6 +62,21 @@ export default {
     }
     if (this.disabled) {
       props.class.push('disabled')
+    }
+
+    if(this.social){
+      if(!this.socialNetwork){
+        this.socialNetwork = 'bitbucket'
+      }
+      props.class.push('btn-block')
+      props.class.push('btn-social')
+      props.class.push(`btn-${this.socialNetwork}`)
+      const content = [h(LteIcon, {class:`fa fa-${this.socialNetwork}`}),[]]
+      content.push(this.$slots.default)
+      return h('a', props, content)
+    }
+    if(!this.type && !this.bg){
+      props.class.push(`btn-default`)
     }
     if (this.app) {
       props.class.push('btn-app')

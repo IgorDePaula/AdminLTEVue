@@ -1,4 +1,4 @@
-# Button
+# LteButton
 
 [[toc]]
 Para usar o componente botão importe-o para o seu scrit e use-o com a assinatura abaixo:
@@ -53,7 +53,18 @@ A propriedade "bg" recebe um valor do tipo String, e é opcional. Recomenda-se n
 
 ### Estilo Block
 
-Para o componente ficar com estilo _block_, de cantos em ângulo reto, adicione a propriedade _flat_ como **true**:
+Para o componente ficar com estilo _block_, adicione a propriedade _block_ como **true**:
+
+```html
+<lte-button :block="true">clique aqui</lte-button>
+```
+<lte-button :block="true" type='default'>clique aqui</lte-button> 
+
+A propriedade _block_ é opcional e do tipo Boolean.
+
+### Estilo Flat
+
+Para o componente ficar com estilo _flat_, de cantos em ângulo reto, adicione a propriedade _flat_ como **true**:
 
 ```html
 <lte-button :flat="true">clique aqui</lte-button>
@@ -85,3 +96,27 @@ Para o componente ficar com estilo app, quadrado, adicione _app_ como **true**:
 <lte-button :app="true" type='default'>clique aqui</lte-button> 
 
 A propriedade _app_ é opcional e do tipo Boolean. Recomenda-se adicionar um ícone com o texto para ficar melhor representado na tela.
+
+
+### Social Button
+
+O componente _button_ também tem propriedades para indicar redes sociais:
+
+
+| Rede social        | Real                                              | Código |
+|:-------------:|:-------------------------------------------------:|:-------:|
+| bitbucket        | <lte-button :social='true' social-network='bitbucket'>clique aqui</lte-button>  | ```<lte-button :social='true' social-network='bitbucket'>clique aqui</lte-button>```|
+| dropbox  | <lte-button :social='true' social-network='dropbox'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='dropbox'>clique aqui</lte-button>```| 
+| facebook | <lte-button :social='true' social-network='facebook'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='facebook'>clique aqui</lte-button>```|
+| flickr| <lte-button :social='true' social-network='flickr'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='flickr'>clique aqui</lte-button>```|
+| foursquare| <lte-button :social='true' social-network='foursquare'>clique aqui</lte-button>      | ```<lte-button :social='tru' social-network='foursquare'>clique aqui</lte-button>```|
+| github | <lte-button :social='true' social-network='github'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='github'>clique aqui</lte-button>```|
+| google | <lte-button :social='true' social-network='google'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='google'>clique aqui</lte-button>```|
+| instagram | <lte-button :social='true' social-network='instagram'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='instagram'>clique aqui</lte-button>```|
+| linkedin | <lte-button :social='true' social-network='linkedin'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='linkedin'>clique aqui</lte-button>```|
+| tumblr | <lte-button :social='true' social-network='tumblr'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='tumblr'>clique aqui</lte-button>```|
+| twitter | <lte-button :social='true' social-network='twitter'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='twitter'>clique aqui</lte-button>```|
+| vk | <lte-button :social='true' social-network='vk'>clique aqui</lte-button>      | ```<lte-button :social='true' social-network='vk'>clique aqui</lte-button>```|
+
+
+Onde a propriedade **social** é do tipo Boolean. Se ela for _verdadeira_ uma rede social deve ser indicada na propriedade _social-network_, propriedade esta que é do tipo String. Se a propriedade _social_ for verdadeira e nenhuma rede social for indicada conforme anteriormente citado, ela assumirá um valor default: 'bitbucket'.
