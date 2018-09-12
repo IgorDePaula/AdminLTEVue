@@ -31,9 +31,6 @@ export default {
     },
     close () {
       this.class = ''
-    },
-    clickHandler (item) {
-      item.handler()
     }
   },
   render: function (h) {
@@ -43,13 +40,13 @@ export default {
     content.push(h(LteButton, { props: { type: type } }, [this.title]))
     content.push(h(LteButton, {
       props: { type: type, dropdown: true },
-      on: { click: this.open, blur: this.close }
+      on: { click: this.open }
     }, [h('span', { class: 'caret' }), h('span', { class: 'sr-only' }, ['Toggle Dropdown'])]))
     const list = this.itens.map(item => {
       return h('li', {}, [h('a', { on: { click: item.handler } }, [item.title])])
     })
     if (this.class == 'open') {
-      content.push(h('div', { class: 'dropdown-backdrop' }, []))
+      content.push(h('div', { class: 'dropdown-backdrop', on: { click: this.close } }, []))
     }
     props.class = this.class
     content.push(h('ul', { class: 'dropdown-menu', attrs: { role: 'menu' } }, list))

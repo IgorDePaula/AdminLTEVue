@@ -22,6 +22,11 @@ export default {
           handler: () => {
             console.log('log from handler')
           }
+        },
+        { title: 'test2',
+          handler: () => {
+            console.log('second handler')
+          }
         }
       ]
     }
