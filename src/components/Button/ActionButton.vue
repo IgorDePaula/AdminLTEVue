@@ -46,9 +46,9 @@ export default {
       on: { click: this.open, blur: this.close }
     }, [h('span', { class: 'caret' }), h('span', { class: 'sr-only' }, ['Toggle Dropdown'])]))
     const list = this.itens.map(item => {
-      return h('li', {}, [h('a', { on: { click: item.handler } }, [item.title])])
+      return h('li', { on: { click: item.handler } }, [h('a', { }, [item.title])])
     })
-    if (this.class == 'open') {
+    if (this.class === 'open') {
       content.push(h('div', { class: 'dropdown-backdrop' }, []))
     }
     props.class = this.class

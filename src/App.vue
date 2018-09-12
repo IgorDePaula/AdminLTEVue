@@ -18,9 +18,15 @@ export default {
   data () {
     return {
       list: [
-        { title: 'test',
+        {
+          title: 'test',
           handler: () => {
             console.log('log from handler')
+          }
+        }, {
+          title: 'test 2',
+          handler: () => {
+            console.log('log from handler 2')
           }
         }
       ]
