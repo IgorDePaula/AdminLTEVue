@@ -7,18 +7,18 @@ Tem ainda o parâmetro _type_ que indica a coloração do componente. Parâmetro
 <lte-action-button type="warning" title="options" :itens="[{}]"/>
 ``` 
 
-<lte-action-button type="warning" title="options" :itens="[{title: 'test',handler: () => {window.console.log('log from handler')}}, {title: 'test 2',handler: () => {window.console.log('log from handler 2')}}]"/>
+<lte-action-button type="warning" title="options" :itens="[{title: 'test',handler: () => {}}, {title: 'test 2',handler: () => {}}]"/>
 
 ### Tipos
 
 | Tipo          | Real                                              | Código |
 |:-------------:|:-------------------------------------------------:|:-------:|
-| info          | <lte-action-button type="info" title="options" :itens="[{title: 'test',handler: () => {window.console.log('log from handler')}}, {title: 'test 2',handler: () => {window.console.log('log from handler 2')}}]"/>  | ```<lte-action-button type="info" title="options" :itens="[]"/> ```|
-| danger     | <lte-action-button type="danger" title="options" :itens="[{title: 'test',handler: () => {window.console.log('log from handler')}}, {title: 'test 2',handler: () => {window.console.log('log from handler 2')}}]"/>     | ```<lte-action-button type="danger" title="options" :itens="[]"/> ```| 
-| warning | <lte-action-button type="warning" title="options" :itens="[{title: 'test',handler: () => {window.console.log('log from handler')}}, {title: 'test 2',handler: () => {window.console.log('log from handler 2')}}]"/>    | ```<lte-action-button type="warning" title="options" :itens="[]"/> ```|
-| success| <lte-action-button type="success" title="options" :itens="[{title: 'test',handler: () => {window.console.log('log from handler')}}, {title: 'test 2',handler: () => {window.console.log('log from handler 2')}}]"/>    | ```<lte-action-button type="success" title="options" :itens="[]"/> ```|
-| primary| <lte-action-button type="primary" title="options" :itens="[{title: 'test',handler: () => {window.console.log('log from handler')}}, {title: 'test 2',handler: () => {window.console.log('log from handler 2')}}]"/>     | ```<lte-action-button type="primary" title="options" :itens="[]"/> ```|
-| default | <lte-action-button title="options" :itens="[{title: 'test',handler: () => {window.console.log('log from handler')}}, {title: 'test 2',handler: () => {window.console.log('log from handler 2')}}]"></lte-action-button>      | ```<lte-action-button title="options" :itens="list"/> ```|
+| info          | <lte-action-button type="info" title="options" :itens="[{title: 'test',handler: () => {}}, {title: 'test 2',handler: () => {}}]"/>  | ```<lte-action-button type="info" title="options" :itens="[]"/> ```|
+| danger     | <lte-action-button type="danger" title="options" :itens="[{title: 'test',handler: () => {}}, {title: 'test 2',handler: () => {}}]"/>     | ```<lte-action-button type="danger" title="options" :itens="[]"/> ```| 
+| warning | <lte-action-button type="warning" title="options" :itens="[{title: 'test',handler: () => {}}, {title: 'test 2',handler: () => {}}]"/>    | ```<lte-action-button type="warning" title="options" :itens="[]"/> ```|
+| success| <lte-action-button type="success" title="options" :itens="[{title: 'test',handler: () => {}}, {title: 'test 2',handler: () => {}}]"/>    | ```<lte-action-button type="success" title="options" :itens="[]"/> ```|
+| primary| <lte-action-button type="primary" title="options" :itens="[{title: 'test',handler: () => {}}, {title: 'test 2',handler: () => {}}]"/>     | ```<lte-action-button type="primary" title="options" :itens="[]"/> ```|
+| default | <lte-action-button title="options" :itens="[{title: 'test',handler: () => {}}, {title: 'test 2',handler: () => {}}]"></lte-action-button>      | ```<lte-action-button title="options" :itens="[]"/> ```|
 
 ### Itens
 
@@ -32,3 +32,13 @@ Cada item do array da propriedade _itens_ precisa ter exatamente 2 propriedades:
   }
 ]
 ```
+
+### Flat 
+
+Também tem a opção _flat_ que o faz ter cantos de ângulo reto.
+
+```html
+<lte-action-button type="warning" :flat="true" title="options" :itens="[{}]"/>
+``` 
+
+<lte-action-button type="warning"  :flat="true"  title="options" :itens="[{title: 'test',handler: () => {}}, {title: 'test 2',handler: () => {}}]"/>

@@ -17,6 +17,12 @@ export default {
     itens: {
       type: Array,
       required: true
+    },
+    flat: {
+      type: Boolean
+    },
+    vertical: {
+      type: Boolean
     }
   },
   data () {
@@ -36,9 +42,9 @@ export default {
     const props = {}
     const type = this.type
     const content = []
-    content.push(h(LteButton, { props: { type: type } }, [this.title]))
+    content.push(h(LteButton, { props: { type: type, flat: this.flat } }, [this.title]))
     content.push(h(LteButton, {
-      props: { type: type, dropdown: true },
+      props: { type: type, dropdown: true, flat: this.flat  },
       on: { click: this.open }
     }, [h('span', { class: 'caret' }), h('span', { class: 'sr-only' }, ['Toggle Dropdown'])]))
     const list = this.itens.map(item => {
@@ -48,6 +54,9 @@ export default {
       content.push(h('div', { class: 'dropdown-backdrop', on: { click: this.close } }, []))
     }
     props.class = this.class
+    if(this.vertical){
+      props.vertical = this.vertical
+    }
     content.push(h('ul', { class: 'dropdown-menu', attrs: { role: 'menu' } }, list))
     return h(LteButtonGroup, props, content)
   }
