@@ -3,7 +3,7 @@ import LteButton from './Button'
 import LteButtonGroup from './ButtonGroup'
 export default {
   name: 'LteActionButton',
-  components:{
+  components: {
     LteButton
   },
   props: {
@@ -20,16 +20,40 @@ export default {
       required: true
     }
   },
-  render(h){
-    const content = []
+  data () {
+    return {
+      class: ''
+    }
+  },
+  methods: {
+    open () {
+      this.class = 'open'
+    },
+    close () {
+      this.class = ''
+    },
+    clickHandler (item) {
+      item.handler()
+    }
+  },
+  render: function (h) {
+    const props = {}
     const type = this.type
-    content.push(h(LteButton, {props:{type: type}}, [this.title]))
-    content.push(h(LteButton, {props:{type: type, dropdown: true}, on:{click:()=>{this.$emit('open')}}}, [h('span',{class:'caret'}),h('span',{class:'sr-only'}, ['Toggle Dropdown'])]))
+    const content = []
+    content.push(h(LteButton, { props: { type: type } }, [this.title]))
+    content.push(h(LteButton, {
+      props: { type: type, dropdown: true },
+      on: { click: this.open, blur: this.close }
+    }, [h('span', { class: 'caret' }), h('span', { class: 'sr-only' }, ['Toggle Dropdown'])]))
     const list = this.itens.map(item => {
-      return h('li',{on:{click:item.handler}},[item.title])
+      return h('li', {}, [h('a', { on: { click: item.handler } }, [item.title])])
     })
-    content.push(h('ul',{class:'dropdown-menu'},list))
-    return h(LteButtonGroup, {on:{open  :()=>{console.log('open')}}},content)
+    if (this.class == 'open') {
+      content.push(h('div', { class: 'dropdown-backdrop' }, []))
+    }
+    props.class = this.class
+    content.push(h('ul', { class: 'dropdown-menu', attrs: { role: 'menu' } }, list))
+    return h(LteButtonGroup, props, content)
   }
 }
 </script>
@@ -45,4 +69,5 @@ export default {
     @import "../../assets/css/core.less";
     @import "../../assets/css/mixins.less";
     @import '../../assets/css/buttons';
+    @import '../../assets/css/dropdown';
 </style>
