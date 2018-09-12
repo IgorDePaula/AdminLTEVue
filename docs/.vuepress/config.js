@@ -41,7 +41,8 @@ module.exports = {
             collapsable: false,
             children: [
               '/LteButton/',
-              '/LteButton/LteButtonGroup'
+              '/LteButton/LteButtonGroup',
+              '/LteButton/LteActionButton'
             ]
           },
           {
@@ -68,7 +69,15 @@ module.exports = {
         ],
         sidebar: [
           '/',
-          '/LteButton/',
+          {
+            title: 'LteButton',
+            collapsable: false,
+            children: [
+              '/LteButton/',
+              '/LteButton/LteButtonGroup',
+              '/LteButton/LteActionButton'
+            ]
+          },
           {
             title: 'Foo',
             collapsable: false,
