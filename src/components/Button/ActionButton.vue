@@ -23,9 +23,13 @@ export default {
   render(h){
     const content = []
     const type = this.type
-    content.push(h(LteButton, {type: type}, [this.title]))
-    content.push(h(LteButton, {type: type, dropdown: true}, [h('span',{class:'caret'}),h('span',{class:'sr-only'}, ['Toggle Dropdown'])]))
-    return h(LteButtonGroup, {}, content)
+    content.push(h(LteButton, {props:{type: type}}, [this.title]))
+    content.push(h(LteButton, {props:{type: type, dropdown: true}, on:{click:()=>{this.$emit('open')}}}, [h('span',{class:'caret'}),h('span',{class:'sr-only'}, ['Toggle Dropdown'])]))
+    const list = this.itens.map(item => {
+      return h('li',{on:{click:item.handler}},[item.title])
+    })
+    content.push(h('ul',{class:'dropdown-menu'},list))
+    return h(LteButtonGroup, {on:{open  :()=>{console.log('open')}}},content)
   }
 }
 </script>

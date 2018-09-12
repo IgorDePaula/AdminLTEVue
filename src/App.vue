@@ -2,7 +2,7 @@
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
 
-    <lte-action-button :type="'warning'" title="care" :itens="[]"></lte-action-button>
+    <lte-action-button :type="'warning'" title="care" :itens="list"></lte-action-button>
   </div>
 
 </template>
@@ -14,6 +14,15 @@ export default {
   name: 'app',
   components: {
     LteActionButton
+  },
+  data(){
+    return {
+      list:[
+        {title: 'test',handler:()=>{
+          console.log('long from handler')
+        } }
+      ]
+    }
   }
 }
 </script>
