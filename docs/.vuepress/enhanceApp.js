@@ -1,6 +1,7 @@
 import LteButton from "../../src/components/Button/Button";
 import LteButtonGroup from "../../src/components/Button/ButtonGroup";
-import LteIcon from "../../src/components/Icon";
+import LteFaIcon from "../../src/components/Icon/FaIcon";
+import LteGlyIcon from "../../src/components/Icon/GlyIcon";
 import LteActionButton from "../../src/components/Button/ActionButton";
 
 export default ({
@@ -11,6 +12,7 @@ export default ({
                 }) => {
   Vue.component(LteButton.name, LteButton)
   Vue.component(LteButtonGroup.name, LteButtonGroup)
-  Vue.component(LteIcon.name, LteIcon)
+  Vue.component(LteFaIcon.name, LteFaIcon)
+  Vue.component(LteGlyIcon.name, LteGlyIcon)
   Vue.component(LteActionButton.name, LteActionButton)
 }

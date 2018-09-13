@@ -38,7 +38,8 @@ module.exports = {
           '/',
           {
             title: 'LteButton',
-            collapsable: false,
+            collapsable: true,
+            collapsed: true,
             children: [
               '/LteButton/',
               '/LteButton/LteButtonGroup',
@@ -46,12 +47,11 @@ module.exports = {
             ]
           },
           {
-            title: 'Foo',
-            collapsable: false,
+            title: 'LteIcon',
+            collapsable: true,
             children: [
-              '/foo/',
-              '/foo/One',
-              '/foo/Two'
+              '/LteIcon/',
+              '/LteIcon/LteGlyIcon'
             ]
           },
         ],
@@ -71,7 +71,7 @@ module.exports = {
           '/',
           {
             title: 'LteButton',
-            collapsable: false,
+            collapsable: true,
             children: [
               '/LteButton/',
               '/LteButton/LteButtonGroup',
@@ -79,12 +79,11 @@ module.exports = {
             ]
           },
           {
-            title: 'Foo',
-            collapsable: false,
+            title: 'LteIcon',
+            collapsable: true,
             children: [
-              '/foo/',
-              '/foo/One',
-              '/foo/Two'
+              '/LteIcon/',
+              '/LteIcon/GlyIcon'
             ]
           },
         ],

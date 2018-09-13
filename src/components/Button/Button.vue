@@ -3,7 +3,7 @@ import typeValidator from '../../mixins/typeValidator'
 import sizeValidator from '../../mixins/sizeValidator'
 import bgValidator from '../../mixins/bgValidator'
 import socialnetworkValidator from '../../mixins/socialnetworkValidator'
-import LteIcon from '../Icon'
+import LteFaIcon from '../Icon/FaIcon'
 export default {
   name: 'LteButton',
   props: {
@@ -28,7 +28,7 @@ export default {
       type: String,
       validator: bgValidator
     },
-    social:{
+    social: {
       type: Boolean
     },
     socialNetwork: {
@@ -70,18 +70,18 @@ export default {
       props.class.push('disabled')
     }
 
-    if(this.social){
-      if(!this.socialNetwork){
+    if (this.social) {
+      if (!this.socialNetwork) {
         this.socialNetwork = 'bitbucket'
       }
       props.class.push('btn-block')
       props.class.push('btn-social')
       props.class.push(`btn-${this.socialNetwork}`)
-      const content = [h(LteIcon, {class:`fa fa-${this.socialNetwork}`}),[]]
+      const content = [h(LteFaIcon, { props: { type: `fa-${this.socialNetwork}` } }), []]
       content.push(this.$slots.default)
       return h('a', props, content)
     }
-    if(!this.type && !this.bg){
+    if (!this.type && !this.bg) {
       props.class.push(`btn-default`)
     }
     if (this.app) {

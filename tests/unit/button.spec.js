@@ -56,7 +56,7 @@ describe('Button app', () => {
 describe('Button social bitbucket', () => {
   // Now mount the component and you have the wrapper
   const wrapper = mount(LteButton)
-  wrapper.setProps({ social: true ,socialNetwork: 'bitbucket' })
+  wrapper.setProps({ social: true, socialNetwork: 'bitbucket' })
   it('renders the correct markup for social button bitbucket', () => {
     expect(wrapper.html()).toContain('a')
     expect(wrapper.html()).toContain('social')
@@ -66,7 +66,7 @@ describe('Button social bitbucket', () => {
 
 describe('Button social dropbox', () => {
   const wrapper = mount(LteButton)
-  wrapper.setProps({ social: true,socialNetwork: 'dropbox' })
+  wrapper.setProps({ social: true, socialNetwork: 'dropbox' })
   it('renders the correct markup for social button dropbox', () => {
     expect(wrapper.html()).toContain('a')
     expect(wrapper.html()).toContain('social')
@@ -76,7 +76,7 @@ describe('Button social dropbox', () => {
 
 describe('Button social facebook', () => {
   const wrapper = mount(LteButton)
-  wrapper.setProps({ social: true,socialNetwork: 'facebook' })
+  wrapper.setProps({ social: true, socialNetwork: 'facebook' })
   it('renders the correct markup for social button facebook', () => {
     expect(wrapper.html()).toContain('a')
     expect(wrapper.html()).toContain('social')
@@ -139,7 +139,7 @@ describe('Button social instagram', () => {
 
 describe('Button social linkedin', () => {
   const wrapper = mount(LteButton)
-  wrapper.setProps({ social: true,  socialNetwork: 'linkedin' })
+  wrapper.setProps({ social: true, socialNetwork: 'linkedin' })
   it('renders the correct markup for social button linkedin', () => {
     expect(wrapper.html()).toContain('a')
     expect(wrapper.html()).toContain('social')
@@ -169,10 +169,19 @@ describe('Button social twitter', () => {
 
 describe('Button social vk', () => {
   const wrapper = mount(LteButton)
-  wrapper.setProps({ social: true,  socialNetwork: 'vk' })
+  wrapper.setProps({ social: true, socialNetwork: 'vk' })
   it('renders the correct markup for social button vk', () => {
     expect(wrapper.html()).toContain('a')
     expect(wrapper.html()).toContain('social')
     expect(wrapper.html()).toContain('vk')
+  })
+})
+
+describe('Button dropdown', () => {
+  const wrapper = mount(LteButton)
+  wrapper.setProps({ dropdown: true })
+  it('renders the correct markup for dropdown button', () => {
+    expect(wrapper.html()).toContain('button')
+    expect(wrapper.html()).toContain('dropdown')
   })
 })

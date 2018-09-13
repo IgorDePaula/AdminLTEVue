@@ -44,7 +44,7 @@ export default {
     const content = []
     content.push(h(LteButton, { props: { type: type, flat: this.flat } }, [this.title]))
     content.push(h(LteButton, {
-      props: { type: type, dropdown: true, flat: this.flat  },
+      props: { type: type, dropdown: true, flat: this.flat },
       on: { click: this.open }
     }, [h('span', { class: 'caret' }), h('span', { class: 'sr-only' }, ['Toggle Dropdown'])]))
     const list = this.itens.map(item => {
@@ -54,7 +54,7 @@ export default {
       content.push(h('div', { class: 'dropdown-backdrop', on: { click: this.close } }, []))
     }
     props.class = this.class
-    if(this.vertical){
+    if (this.vertical) {
       props.vertical = this.vertical
     }
     content.push(h('ul', { class: 'dropdown-menu', attrs: { role: 'menu' } }, list))
