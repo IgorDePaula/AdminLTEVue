@@ -4,10 +4,8 @@ module.exports = {
   footer: 'adminweb',
   description: 'Vue on AdminLTE',
   locales: {
-    // The key is the path for the locale to be nested under.
-    // As a special case, the default locale can use '/' as its path.
     '/': {
-      lang: 'pt-BR', // this will be set as the lang attribute on <html>
+      lang: 'pt-BR',
       title: 'AdminLte Vue',
       description: 'AdminLTE em Vue.js',
     },
@@ -21,14 +19,11 @@ module.exports = {
     sidebarDepth: 2,
 
     locales: {
-      // The key is the path for the locale to be nested under.
-      // As a special case, the default locale can use '/' as its path.
       '/': {
-        lang: 'pt-BR', // this will be set as the lang attribute on <html>
+        lang: 'pt-BR',
         title: 'AdminLte Vue',
         description: 'AdminLTE em Vue.js',
         selectText: 'Idiomas',
-        // label for this locale in the language dropdown
         label: 'Português do Brasil',
         nav: [
           { text: 'Home', link: '/' },
@@ -61,7 +56,6 @@ module.exports = {
         title: 'AdminLte Vue',
         description: 'AdminLTE in Vue.js',
         selectText: 'Languages',
-        // label for this locale in the language dropdown
         label: 'English',
         nav: [
           { text: 'Home', link: '/' },
