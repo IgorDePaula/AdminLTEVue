@@ -51,7 +51,7 @@ module.exports = {
           },
         ],
       },
-      '/en/': {
+      '/en': {
         lang: 'en-US',
         title: 'AdminLte Vue',
         description: 'AdminLTE in Vue.js',
@@ -67,17 +67,17 @@ module.exports = {
             title: 'LteButton',
             collapsable: true,
             children: [
-              '/LteButton/',
-              '/LteButton/LteButtonGroup',
-              '/LteButton/LteActionButton'
+              '/en/LteButton/',
+              '/en/LteButton/LteButtonGroup',
+              '/en/LteButton/LteActionButton'
             ]
           },
           {
             title: 'LteIcon',
             collapsable: true,
             children: [
-              '/LteIcon/',
-              '/LteIcon/GlyIcon'
+              '/en/LteIcon/',
+              '/en/LteIcon/GlyIcon'
             ]
           },
         ],
