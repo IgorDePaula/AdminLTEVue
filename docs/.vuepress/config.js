@@ -51,7 +51,7 @@ module.exports = {
           },
         ],
       },
-      '/en': {
+      '/en/': {
         lang: 'en-US',
         title: 'AdminLte Vue',
         description: 'AdminLTE in Vue.js',
