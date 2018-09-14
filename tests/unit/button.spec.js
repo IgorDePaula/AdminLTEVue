@@ -184,4 +184,8 @@ describe('Button dropdown', () => {
     expect(wrapper.html()).toContain('button')
     expect(wrapper.html()).toContain('dropdown')
   })
+  it('renders the correct markup for dropdown button', () => {
+    expect(wrapper.html()).toContain('button')
+    expect(wrapper.html()).toContain('dropdown')
+  })
 })

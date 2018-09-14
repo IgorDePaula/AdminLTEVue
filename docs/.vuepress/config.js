@@ -67,17 +67,17 @@ module.exports = {
             title: 'LteButton',
             collapsable: true,
             children: [
-              '/LteButton/',
-              '/LteButton/LteButtonGroup',
-              '/LteButton/LteActionButton'
+              '/en/LteButton/',
+              '/en/LteButton/LteButtonGroup',
+              '/en/LteButton/LteActionButton'
             ]
           },
           {
             title: 'LteIcon',
             collapsable: true,
             children: [
-              '/LteIcon/',
-              '/LteIcon/LteGlyIcon'
+              '/en/LteIcon/',
+              '/en/LteIcon/LteGlyIcon'
             ]
           },
         ],

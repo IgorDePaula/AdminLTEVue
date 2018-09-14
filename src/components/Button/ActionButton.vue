@@ -53,9 +53,9 @@ export default {
     if (this.class === 'open') {
       content.push(h('div', { class: 'dropdown-backdrop', on: { click: this.close } }, []))
     }
-    props.class = this.class
+    props.class = [this.class]
     if (this.vertical) {
-      props.vertical = this.vertical
+      props.class.push('vertical')
     }
     content.push(h('ul', { class: 'dropdown-menu', attrs: { role: 'menu' } }, list))
     return h(LteButtonGroup, props, content)
