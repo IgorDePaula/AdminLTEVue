@@ -1,18 +1,14 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
-      <lte-progress-bar :percent="12" color="success" :striped="true" :active="true" size="sm"/>
   </div>
 
 </template>
 
 <script>
-import LteProgressBar from './components/Progress/Progress'
-
 export default {
   name: 'app',
   components: {
-    LteProgressBar
   },
   data () {
     return {

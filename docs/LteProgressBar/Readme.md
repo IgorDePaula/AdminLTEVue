@@ -8,6 +8,8 @@ O componente LteProgressBar fornece uma barra de progresso.
 ```
 
 <lte-progress-bar :percent="12" color="success"/>
+
+<random-progress-bar />
       
       
 ### Cores
