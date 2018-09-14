@@ -26,8 +26,27 @@ describe('ActionButton no action backdrop', () => {
     expect(wrapper.html()).toContain('button')
   })
   wrapper.find('.dropdown-toggle').trigger('click')
+
   it('Validates correct markup to click', () => {
     expect(wrapper.html()).toContain('backdrop')
+  })
+})
+
+describe('ActionButton action list', () => {
+  const mockCallback = jest.fn()
+  const list = [{
+    title: 'test',
+    handler: mockCallback
+  }]
+  const wrapper = mount(LteActionButton, { propsData: { title: 'fa-eye', itens: list } })
+
+  wrapper.find('.dropdown-toggle').trigger('click')
+
+  wrapper.find('li').trigger('click')
+
+
+  it('Validates correct markup to click', () => {
+    expect(mockCallback).toHaveBeenCalled()
   })
 })
 describe('ActionButton vertical', () => {

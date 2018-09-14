@@ -59,7 +59,7 @@
     "coverageDirectory": "tests/coverage",
     "coverageReporters": [
       "text",
-      "text-summary"
+      "text-summary","html"
     ],
     "notify": true,
     "notifyMode": "always",
