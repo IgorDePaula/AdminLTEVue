@@ -1,45 +1,22 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
-<lte-fa-icon type="fa-contao"></lte-fa-icon>
-    <br>
-    <lte-action-button type="warning" title="care" :itens="list"></lte-action-button>
-    <br>
-    <lte-button :social="true">clique aqui</lte-button>
-    <br>
-    <lte-gly-icon type="glyphicon-eur"></lte-gly-icon>
+      <lte-progress-bar :percent="12" color="success" :striped="true" :active="true" size="sm"/>
   </div>
 
 </template>
 
 <script>
-import LteActionButton from './components/Button/ActionButton'
-import LteButton from './components/Button/Button'
-import LteFaIcon from './components/Icon/FaIcon'
-import LteGlyIcon from './components/Icon/GlyIcon'
+import LteProgressBar from './components/Progress/Progress'
 
 export default {
   name: 'app',
   components: {
-    LteActionButton,
-    LteButton,
-    LteFaIcon,
-    LteGlyIcon
+    LteProgressBar
   },
   data () {
     return {
       list: [
-        {
-          title: 'test',
-          handler: () => {
-            console.log('log from handler')
-          }
-        }, {
-          title: 'test 2',
-          handler: () => {
-            console.log('log from handler 2')
-          }
-        }
       ]
     }
   }

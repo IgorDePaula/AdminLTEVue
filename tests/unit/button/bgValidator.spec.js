@@ -1,6 +1,6 @@
-import bgValidator from '../../src/mixins/bgValidator'
+import bgValidator from '../../../src/mixins/button/bgValidator'
 
-describe('BgValidator', () => {
+describe('Button BgValidator', () => {
 
     it('Validates a bgColor maroon', () => {
         expect(bgValidator('maroon')).toBe(true)

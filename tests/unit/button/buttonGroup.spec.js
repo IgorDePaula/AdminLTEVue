@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import LteButtonGroup from '../../src/components/Button/ButtonGroup'
+import LteButtonGroup from '../../../src/components/Button/ButtonGroup'
 
 describe('Button group', () => {
   // Now mount the component and you have the wrapper

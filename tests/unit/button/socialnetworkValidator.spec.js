@@ -1,4 +1,4 @@
-import socialnetworkValidator from '../../src/mixins/socialnetworkValidator'
+import socialnetworkValidator from '../../../src/mixins/button/socialnetworkValidator'
 
 describe('SocialNetworkValidator', () => {
 

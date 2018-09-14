@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import LteActionButton from '../../src/components/Button/ActionButton'
+import LteActionButton from '../../../src/components/Button/ActionButton'
 
 describe('ActionButton action backdrop', () => {
   const list = [{

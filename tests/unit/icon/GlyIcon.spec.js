@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import LteGlyIcon from '../../src/components/Icon/GlyIcon'
+import LteGlyIcon from '../../../src/components/Icon/GlyIcon'
 
 describe('FaIcon', () => {
   const wrapper = mount(LteGlyIcon)

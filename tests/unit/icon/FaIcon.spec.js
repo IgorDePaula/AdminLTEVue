@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import LteFaIcon from '../../src/components/Icon/FaIcon'
+import LteFaIcon from '../../../src/components/Icon/FaIcon'
 
 describe('FaIcon', () => {
   const wrapper = mount(LteFaIcon)

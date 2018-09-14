@@ -49,6 +49,7 @@ module.exports = {
               '/LteIcon/LteGlyIcon'
             ]
           },
+          '/LteProgressBar/'
         ],
       },
       '/en/': {
@@ -80,6 +81,7 @@ module.exports = {
               '/en/LteIcon/LteGlyIcon'
             ]
           },
+          '/LteProgressBar/'
         ],
       }
     }

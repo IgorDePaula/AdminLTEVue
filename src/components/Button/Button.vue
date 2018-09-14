@@ -1,8 +1,8 @@
 <script>
-import typeValidator from '../../mixins/typeValidator'
-import sizeValidator from '../../mixins/sizeValidator'
-import bgValidator from '../../mixins/bgValidator'
-import socialnetworkValidator from '../../mixins/socialnetworkValidator'
+import typeValidator from '../../mixins/button/typeValidator'
+import sizeValidator from '../../mixins/button/sizeValidator'
+import bgValidator from '../../mixins/button/bgValidator'
+import socialnetworkValidator from '../../mixins/button/socialnetworkValidator'
 import LteFaIcon from '../Icon/FaIcon'
 export default {
   name: 'LteButton',

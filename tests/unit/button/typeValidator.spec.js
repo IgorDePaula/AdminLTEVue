@@ -1,6 +1,6 @@
-import typeValidator from '../../src/mixins/typeValidator'
+import typeValidator from '../../../src/mixins/button/typeValidator'
 
-describe('TypeValidator', () => {
+describe('Button TypeValidator', () => {
 
     it('Validates a type default', () => {
         expect(typeValidator('default')).toBe(true)

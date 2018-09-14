@@ -1,6 +1,6 @@
-import sizeValidator from '../../src/mixins/sizeValidator'
+import sizeValidator from '../../../src/mixins/button/sizeValidator'
 
-describe('SizeValidator', () => {
+describe('Button SizeValidator', () => {
 
     it('Validates a size xs', () => {
         expect(sizeValidator('xs')).toBe(true)

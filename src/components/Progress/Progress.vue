@@ -1,45 +1,59 @@
 <script>
-import progressBarSizeValidator from '../../mixins/progressBarSizeValidator'
+import sizeValidator from '../../mixins/progressBar/sizeValidator'
+import bgValidator from '../../mixins/progressBar/bgValidator'
 export default {
-  name: 'LteActionButton',
-  components: {
-    LteButton
-  },
+  name: 'LteProgressBar',
   props: {
-    type: {
+    color: {
       type: String,
-      validator: progressBarSizeValidator
+      validator: bgValidator
+    },
+    size: {
+      type: String,
+      validator: sizeValidator
     },
     active: {
       type: Boolean
     },
+    striped: {
+      type: Boolean
+    },
     vertical: {
       type: Boolean
-    }
-  },
-  methods: {
-    open () {
-      this.class = 'open'
     },
-    close () {
-      this.class = ''
+    percent: {
+      type: Number,
+      default: () => 0
     }
   },
   render: function (h) {
     const props = {}
     props.class = []
-    if(this.type){
-      props.class.push(`progress-${this.type}`)
+    const content = []
+    let sizeClass = []
+    if (this.color) {
+      props.class.push(`progress-bar-${this.color}`)
     }
-    if(this.active){
+    if (this.striped) {
+      props.class.push('progress-bar-striped')
+    }
+    if (this.active) {
       props.class.push('active')
     }
-    if(this.vertical){
-      props.class.push('vertical')
+    if (this.vertical) {
+      sizeClass.push('vertical')
     }
-    props.staticClass = 'progress'
-    const content = [this.$slots.default]
-    return h('div', props, content)
+    if (this.size) {
+      sizeClass.push(`progress-${this.size}`)
+    }
+    props.staticClass = 'progress-bar'
+    props.style = {}
+    props.style.width = `${this.percent}%`
+
+    const span = h('span', { class: 'sr-only' }, [`${this.percent}%`])
+    content.push(h('div', props, [span]))
+
+    return h('div', { staticClass: 'progress', class: sizeClass }, content)
   }
 }
 </script>
