@@ -36,22 +36,9 @@ describe('Alert', () => {
 describe('Alert', () => {
     const wrapper = mount(LteAlert, {propsData: {type: 'success', title: 'title', body: 'body', dimissible: true}})
 
-
-    it('Validates correct markup to click', () => {
-        expect(wrapper.html()).toContain('class="close"')
-    })
-    wrapper.find('.close').trigger('click')
-    it('Validates correct markup to click', () => {
-        expect(wrapper.isVisible()).toBe(false)
-    })
-})
-
-describe('Alert', () => {
-    const wrapper = mount(LteAlert, {propsData: {type: 'success', title: 'title', body: 'body', dimissible: true}})
-
     wrapper.find('.close').trigger('click')
 
     it('Validates correct markup to click', () => {
-        expect(wrapper.html()).not.toContain('body')
+        expect(wrapper.html()).toBeUndefined()
     })
 })
