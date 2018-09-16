@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
+    <lte-alert type="warning" title="danger" :dimissible="true" body="body is called" />
   </div>
 
 </template>
 
 <script>
+  import LteAlert from './components/Alert/Alert'
 export default {
   name: 'app',
   components: {
+      LteAlert
   },
   data () {
     return {
