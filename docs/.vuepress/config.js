@@ -31,7 +31,7 @@ module.exports = {
         ],
         sidebar: [
           '/',
-            '/LteAlert/',
+          '/LteAlert/','/LteCallout/',
           {
             title: 'LteButton',
             collapsable: true,
@@ -65,7 +65,7 @@ module.exports = {
         ],
         sidebar: [
           '/',
-            '/LteAlert/',
+          '/LteAlert/','/LteCallout/',
           {
             title: 'LteButton',
             collapsable: true,

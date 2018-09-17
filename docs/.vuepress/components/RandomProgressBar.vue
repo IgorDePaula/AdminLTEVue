@@ -1,7 +1,7 @@
 <template>
    <div>
-      {{percent.toFixed(0)}}% <br>
-      <lte-progress-bar :percent="percent" color="success" />
+      {{percent.toFixed(2)}}% <br>
+      <lte-progress-bar :percent="percent.toFixed(2)" color="success" />
    </div>
 </template>
 

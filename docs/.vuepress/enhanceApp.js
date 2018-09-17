@@ -1,10 +1,12 @@
-import LteButton from "../../src/components/Button/Button";
-import LteButtonGroup from "../../src/components/Button/ButtonGroup";
-import LteFaIcon from "../../src/components/Icon/FaIcon";
-import LteGlyIcon from "../../src/components/Icon/GlyIcon";
-import LteActionButton from "../../src/components/Button/ActionButton";
-import LteProgressBar from "../../src/components/Progress/Progress";
-import LteAlert from "../../src/components/Alert/Alert"
+import LteButton from '../../src/components/Button/Button'
+import LteButtonGroup from '../../src/components/Button/ButtonGroup'
+import LteFaIcon from '../../src/components/Icon/FaIcon'
+import LteGlyIcon from '../../src/components/Icon/GlyIcon'
+import LteActionButton from '../../src/components/Button/ActionButton'
+import LteProgressBar from '../../src/components/Progress/Progress'
+import LteAlert from '../../src/components/Alert/Alert'
+import LteCallout from '../../src/components/Callout/Callout'
+
 export default ({
                   Vue, // the version of Vue being used in the VuePress app
                   options, // the options for the root Vue instance
@@ -18,4 +20,5 @@ export default ({
   Vue.component(LteActionButton.name, LteActionButton)
   Vue.component(LteProgressBar.name, LteProgressBar)
   Vue.component(LteAlert.name, LteAlert)
+  Vue.component(LteCallout.name, LteCallout)
 }
