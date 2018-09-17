@@ -1,5 +1,5 @@
 # AdminLteVue
-https://br.financas.yahoo.com/noticias/ela-fatura-r-240-mil-por-ano-dando-abracos-em-pessoas-que-nao-conhece-173029552.html
+[![Build Status](https://travis-ci.org/IgorDePaula/AdminLTEVue.svg?branch=master)](https://travis-ci.org/IgorDePaula/AdminLTEVue)
 
 AdminLTE theme in Vue.js components.
 
