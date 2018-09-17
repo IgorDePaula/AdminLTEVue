@@ -50,6 +50,7 @@ module.exports = {
               '/LteIcon/LteGlyIcon'
             ]
           },
+          '/LteInfoBox/',
           '/LteProgressBar/'
         ],
       },
@@ -83,6 +84,7 @@ module.exports = {
               '/en/LteIcon/LteGlyIcon'
             ]
           },
+          '/LteInfoBox/',
           '/LteProgressBar/'
         ],
       }

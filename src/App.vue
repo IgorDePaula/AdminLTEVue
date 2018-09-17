@@ -1,17 +1,18 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
-    <lte-alert type="warning" title="danger" :dimissible="true" body="body is called" />
+    <lte-info-box title="bookmarks" number="308" icon="fa-flag-o" bg-icon="green" bg="green" progress-bar="50" progress-description="test" />
   </div>
 
 </template>
 
 <script>
-  import LteAlert from './components/Alert/Alert'
+import LteInfoBox from './components/InfoBox/InfoBox'
+
 export default {
   name: 'app',
   components: {
-      LteAlert
+    LteInfoBox
   },
   data () {
     return {
