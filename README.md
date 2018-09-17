@@ -1,4 +1,12 @@
 # AdminLteVue
+https://br.financas.yahoo.com/noticias/ela-fatura-r-240-mil-por-ano-dando-abracos-em-pessoas-que-nao-conhece-173029552.html
+
+AdminLTE theme in Vue.js components.
+
+## WIP
+
+Work in progress; Not use in production
+
 
 ## Project setup
 ```
