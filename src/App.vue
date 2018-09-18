@@ -6,6 +6,13 @@
     <lte-info-box icon="fa-eye" title="open" bg-icon="green" number="308"/>
     <br>
     <lte-alert title="meus" body="de q?" type="info" :dimissible="true" />
+    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+    <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
+      <input type="hidden" name="code" value="8694B07F9C9C92511479AFB738D93604" />
+      <input type="hidden" name="iot" value="button" />
+      <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/205x30-assinar.gif" name="submit" alt="Pague com PagSeguro - É rápido, grátis e seguro!" width="205" height="30" />
+    </form>
+    <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
   </div>
 
 </template>
