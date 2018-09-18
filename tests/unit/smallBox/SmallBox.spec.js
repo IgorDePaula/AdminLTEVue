@@ -3,7 +3,7 @@ import LteSmallBox from '../../../src/components/SmallBox/SmallBox'
 
 describe('SmallBox', () => {
   // Now mount the component and you have the wrapper
-  const wrapper = mount(LteSmallBox, { propsData: { title: 'bookmarks', number: 308, icon: 'fa-flag-o', bg: 'green', url: 'http://google.com' } })
+  const wrapper = mount(LteSmallBox, { propsData: { title: 'bookmarks', number: 308, textBottom: 'More info', icon: 'fa-flag-o', bg: 'green', url: 'http://google.com' } })
 
   it('renders the correct markup', () => {
     expect(wrapper.html()).toContain('small-box')

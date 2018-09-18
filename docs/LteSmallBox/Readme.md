@@ -5,16 +5,16 @@
 O componente LteSmallBox provê uma caixa de informação de grande destaque, muito utilizada em dashboards.
 
 ```html
-<lte-small-box title="bookmarks" number="308" icon="fa-flag-o" bg-icon="green" text-botton="More info" />
+<lte-small-box title="bookmarks" number="308" icon="fa-flag-o" bg-icon="green" text-botton="More info" url="#"/>
 ```
-<lte-small-box title="bookmarks" number="308" icon="fa-flag-o" bg-icon="green"  text-botton="More info" />
+<lte-small-box title="bookmarks" number="308" icon="fa-flag-o" bg-icon="green"  text-botton="More info" url=# />
 ### Ícones
 
 O componente tem uma propriedade obrigatória chamada _icon_, que utiliza ícons Font Awesome.
 
 ### Cores
 
-As cores utilizadas tanto no fundo do ícone quando no fundo da infobox são: _aqua_, _yellow_, _red_ e _green_
+As cores utilizadas tanto no fundo do ícone quando no fundo da infobox são: _aqua_, _yellow_, _red_ e _green_.
 
 ### Propriedades obrigatórias
 
