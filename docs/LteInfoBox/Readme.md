@@ -14,12 +14,12 @@ O componente tem uma propriedade obrigatória chamada _icon_, que utiliza ícons
 
 ### Cores
 
-As cores utilizadas tanto no fundo do ícone quando no fundo da infobox são: _aqua_, _yellow_, _red_ e _green_
+As cores utilizadas tanto no fundo do ícone quando no fundo da infobox são: _aqua_, _yellow_, _red_ e _green_.
 
 ### Propriedades obrigatórias
 
 As propriedades obrigatórias são _title_, do tipo String, indicando o título da caixa.
-Outra propriedade é _number_, do tipo Number, indicando o número a ser exibido. Outras são _icon_ conforme acima mencionado, e _bg-icon_, do tipo String, que indica a cor de fundo do ícone, acima citado anteriormente.
+Outra propriedade é _number_, do tipo Number e String, indicando o número a ser exibido (como porcentagem, por exemplo). Outras são _icon_ conforme acima mencionado, e _bg-icon_, do tipo String, que indica a cor de fundo do ícone, acima citado anteriormente.
 
 ### Propriedades opcionais
 

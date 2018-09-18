@@ -51,7 +51,8 @@ module.exports = {
             ]
           },
           '/LteInfoBox/',
-          '/LteProgressBar/'
+          '/LteProgressBar/',
+          '/LteSmallBox/'
         ],
       },
       '/en/': {
@@ -85,7 +86,8 @@ module.exports = {
             ]
           },
           '/LteInfoBox/',
-          '/LteProgressBar/'
+          '/LteProgressBar/',
+          '/LteSmallBox/'
         ],
       }
     }

@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
-    <lte-info-box title="bookmarks" number="308" icon="fa-flag-o" bg-icon="green" bg="green" progress-bar="50" progress-description="test" />
+    <lte-small-box title="bookmarks" number="90%" url="http://google.com" bg="green" icon="fa-shopping-cart" text-botton="mais informações" />
   </div>
 
 </template>
 
 <script>
-import LteInfoBox from './components/InfoBox/InfoBox'
+import LteSmallBox from './components/SmallBox/SmallBox'
 
 export default {
   name: 'app',
   components: {
-    LteInfoBox
+    LteSmallBox
   },
   data () {
     return {
@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style >
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

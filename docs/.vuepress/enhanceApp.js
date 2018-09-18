@@ -7,6 +7,7 @@ import LteProgressBar from '../../src/components/Progress/Progress'
 import LteAlert from '../../src/components/Alert/Alert'
 import LteCallout from '../../src/components/Callout/Callout'
 import LteInfoBox from '../../src/components/InfoBox/InfoBox'
+import LteSmallBox from '../../src/components/SmallBox/SmallBox'
 export default ({
                   Vue, // the version of Vue being used in the VuePress app
                   options, // the options for the root Vue instance
@@ -22,4 +23,5 @@ export default ({
   Vue.component(LteAlert.name, LteAlert)
   Vue.component(LteCallout.name, LteCallout)
   Vue.component(LteInfoBox.name, LteInfoBox)
+  Vue.component(LteSmallBox.name, LteSmallBox)
 }

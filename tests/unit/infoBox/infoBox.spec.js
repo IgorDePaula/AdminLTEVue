@@ -3,7 +3,7 @@ import LteInfoBox from '../../../src/components/InfoBox/InfoBox'
 
 describe('InfoBox', () => {
   // Now mount the component and you have the wrapper
-  const wrapper = mount(LteInfoBox, { propsData: { title: 'bookmarks', number: '308', icon: 'fa-flag-o', 'bg-icon': 'green' } })
+  const wrapper = mount(LteInfoBox, { propsData: { title: 'bookmarks', number: 308, icon: 'fa-flag-o', 'bg-icon': 'green' } })
 
   it('renders the correct markup', () => {
     expect(wrapper.html()).toContain('info-box')
@@ -23,5 +23,15 @@ describe('InfoBox', () => {
     expect(wrapper.html()).toContain('90%')
     expect(wrapper.html()).toContain('progress-description')
     expect(wrapper.html()).toContain('test')
+  })
+
+})
+
+describe('InfoBox', () => {
+  // Now mount the component and you have the wrapper
+  const wrapper = mount(LteInfoBox, { propsData: { title: 'bookmarks', number: '90%', icon: 'fa-flag-o', 'bg-icon': 'green' } })
+
+  it('renders number with string', () => {
+    expect(wrapper.html()).toContain('90%')
   })
 })

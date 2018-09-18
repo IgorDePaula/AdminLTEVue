@@ -1,4 +1,4 @@
-# LTeIcon
+# LteIcon
 
 Para ícones o AdminLTE tem 2 pacotes: Font Awesome e Glyphicon, do bootstrap. Nesta página iremos falar do Font Awesome, na próxima o Glyphicon.
 

@@ -1,5 +1,5 @@
 <script>
-import LteIcon from '../Icon/FaIcon'
+import LteFaIcon from '../Icon/FaIcon'
 import bgValidator from '../../mixins/infoBox/bgValidator'
 export default {
   name: 'LteInfoBox',
@@ -18,7 +18,7 @@ export default {
       required: true
     },
     number: {
-      type: Number,
+      type: [Number, String],
       required: true
     },
     bg: {
@@ -36,7 +36,7 @@ export default {
     const content = []
     const props = {}
     props.staticClass = 'info-box'
-    const icon = h(LteIcon, { props: { type: this.icon } })
+    const icon = h(LteFaIcon, { props: { type: this.icon } })
     const bgIcon = h('span', { staticClass: 'info-box-icon', class: !this.bg ? `bg-${this.bgIcon}` : '' }, [icon])
     const title = h('span', { class: 'info-box-text' }, [this.title])
     const number = h('span', { class: 'info-box-number' }, [this.number])
