@@ -1,7 +1,7 @@
 module.exports = {
   base: '/AdminLTEVue/',
   title: 'AdminLte Vue',
-  footer: 'adminweb',
+  serviceWorker: true,
   description: 'Vue on AdminLTE',
   locales: {
     '/': {

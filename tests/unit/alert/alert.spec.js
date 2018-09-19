@@ -11,7 +11,7 @@ describe('Alert', () => {
 
 describe('Alert', () => {
     const wrapper = mount(LteAlert, {propsData: {type: 'danger', title: 'title', body: 'body'}})
-    it('Validates a type info', () => {
+    it('Validates a type danget', () => {
         expect(wrapper.html()).toContain('alert-danger')
         expect(wrapper.html()).toContain('fa-ban')
     })
@@ -19,7 +19,7 @@ describe('Alert', () => {
 
 describe('Alert', () => {
     const wrapper = mount(LteAlert, {propsData: {type: 'warning', title: 'title', body: 'body'}})
-    it('Validates a type info', () => {
+    it('Validates a type warning', () => {
         expect(wrapper.html()).toContain('alert-warning')
         expect(wrapper.html()).toContain('fa-warning')
     })
@@ -27,7 +27,7 @@ describe('Alert', () => {
 
 describe('Alert', () => {
     const wrapper = mount(LteAlert, {propsData: {type: 'success', title: 'title', body: 'body'}})
-    it('Validates a type info', () => {
+    it('Validates a type success', () => {
         expect(wrapper.html()).toContain('alert-success')
         expect(wrapper.html()).toContain('fa-check')
     })
