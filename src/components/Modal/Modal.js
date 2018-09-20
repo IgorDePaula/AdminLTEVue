@@ -24,7 +24,8 @@ export default {
     },
     type: {
       type: String,
-      validator: typeValidator
+      validator: typeValidator,
+      default: 'default'
     }
   },
   data () {
@@ -34,16 +35,11 @@ export default {
   },
   methods: {
     close (e) {
-      if (e.keyCode === 27) {
+      debugger
+      if(e.keyCode === 27){
         this.in = false
       }
     }
-  },
-  created () {
-    window.addEventListener('keydown', this.close)
-  },
-  beforeDestroy () {
-    window.removeEventListener('keydown')
   },
   render (h) {
     const globalProps = {}
@@ -60,6 +56,7 @@ export default {
       globalProps.style.push({ display: 'block' })
       globalProps.style.push({ 'padding-right': '12px' })
     }
+
     if (this.type !== 'default') {
       globalProps.class.push(`modal-${this.type}`)
     }
@@ -94,6 +91,6 @@ export default {
 
     const modal = h('div', globalProps, [modalDialog])
 
-    return h('div', { on: this.$listeners }, [button, modal])
+    return h('div', { on: { keyup: this.close, ...this.$listeners } }, [button, modal])
   }
 }

@@ -3,7 +3,7 @@ import LteModal from '../../../src/components/Modal/Modal'
 
 describe('Modal', () => {
   // Now mount the component and you have the wrapper
-  const wrapper = mount(LteModal, { propsData: { title: 'header de modal', close: 'Fechar', target: 'id123' } })
+  const wrapper = mount(LteModal, { propsData: {openText:'abrir', type: 'info', title: 'header de modal', closeText: 'Fechar', target: 'id123' } })
 
   it('renders the correct markup', () => {
     expect(wrapper.html()).toContain('button')
@@ -30,19 +30,11 @@ describe('Modal', () => {
     expect(wrapper.html()).toContain('padding')
     expect(wrapper.html()).toContain('12px')
   })
-/*
-  wrapper.find('.close').trigger('click')
-  it('renders modal', () => {
-    expect(wrapper.html()).toContain('display')
-    expect(wrapper.html()).toContain('block')
-    expect(wrapper.html()).toContain('padding')
-    expect(wrapper.html()).toContain('12px')
-  }) */
 })
 
 describe('Modal', () => {
   // Now mount the component and you have the wrapper
-  const wrapper = mount(LteModal, { propsData: { title: 'header de modal', close: 'Fechar', target: 'id123' } })
+  const wrapper = mount(LteModal, { propsData: {openText:'abrir', title: 'header de modal', closeText: 'Fechar', target: 'id123' } })
 
   wrapper.find('button').trigger('click')
 
@@ -55,13 +47,37 @@ describe('Modal', () => {
 
 describe('Modal', () => {
   // Now mount the component and you have the wrapper
-  const wrapper = mount(LteModal, { propsData: { type: 'info', title: 'header de modal', close: 'Fechar', target: 'id123' } })
+  const wrapper = mount(LteModal, { propsData: {openText:'abrir', type: 'info', title: 'header de modal', closeText: 'Fechar', target: 'id123' } })
 
   wrapper.find('button').trigger('click')
 
-  wrapper.trigger('keydown.esc')
+  wrapper.trigger('keyup.esc')
   it('renders close modal by esc click', () => {
     expect(wrapper.html()).not.toContain('display')
     expect(wrapper.html()).not.toContain('block')
+  })
+})
+
+describe('Modal', () => {
+  // Now mount the component and you have the wrapper
+  const wrapper = mount(LteModal, { propsData: {openText:'abrir', type: 'info', title: 'header de modal', closeText: 'Fechar', target: 'id123', saveText: 'Salvar' } })
+
+  wrapper.find('button').trigger('click')
+  wrapper.find('.btn-outline').trigger('click')
+
+  it('renders close modal by save click', () => {
+    expect(wrapper.emitted()['modal-saved']).toBeTruthy()
+  })
+})
+
+describe('Modal', () => {
+  // Now mount the component and you have the wrapper
+  const wrapper = mount(LteModal, { propsData: {openText:'abrir', title: 'header de modal', closeText: 'Fechar', target: 'id123', saveText: 'Salvar' } })
+
+  wrapper.find('button').trigger('click')
+  wrapper.find('.btn-primary').trigger('click')
+
+  it('renders close modal by save not outline click', () => {
+    expect(wrapper.emitted()['modal-saved']).toBeTruthy()
   })
 })
