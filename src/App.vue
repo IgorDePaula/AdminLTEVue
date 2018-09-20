@@ -1,33 +1,23 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
-    <lte-small-box title="bookmarks" number="90%" url="http://google.com" bg="green" icon="fa-shopping-cart" text-botton="mais informações" />
-    <br>
-    <lte-info-box icon="fa-eye" title="open" bg-icon="green" number="308"/>
-    <br>
-    <lte-alert title="meus" body="de q?" type="info" :dimissible="true" />
-    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-    <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
-      <input type="hidden" name="code" value="F212980187876F0CC4A58FAE2E69074E" />
-      <input type="hidden" name="iot" value="button" />
-      <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/209x48-assinar-assina.gif" name="submit" alt="Pague com PagSeguro - É rápido, grátis e seguro!" width="209" height="48" />
-    </form>
-    <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+
+  <lte-modal title="teste de modal title" target="modal1" close-text="Fechar" open-text="Abrir modal" type="info">
+      teste de modal
+  </lte-modal>
+      <lte-modal title="teste de modal title" target="modal2" save-text="Salvar" close-text="Fechar" open-text="Abrir modal" type="warning">
+      teste de modal
+  </lte-modal>
   </div>
 
 </template>
 
 <script>
-import LteSmallBox from './components/SmallBox/SmallBox'
-import LteInfoBox from './components/InfoBox/InfoBox'
-import LteAlert from './components/Alert/Alert'
-
+import LteModal from '../src/components/Modal/Modal'
 export default {
   name: 'app',
   components: {
-    LteSmallBox,
-    LteInfoBox,
-    LteAlert
+    LteModal
   },
   data () {
     return {
