@@ -24,7 +24,7 @@ export default {
       type: String,
       required: true
     },
-    textBotton: {
+    textBottom: {
       type: String,
       required: true
     }
