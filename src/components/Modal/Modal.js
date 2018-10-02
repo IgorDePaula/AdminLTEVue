@@ -36,7 +36,7 @@ export default {
   methods: {
     close (e) {
       if (e.keyCode === 27) {
-        this.in = false
+        this.in = !this.in
       }
     }
   },
@@ -90,6 +90,6 @@ export default {
 
     const modal = h('div', globalProps, [modalDialog])
 
-    return h('div', { on: { keyup: this.close, ...this.$listeners } }, [button, modal])
+    return h('div', { on: { keyup: this.close } }, [button, modal])
   }
 }

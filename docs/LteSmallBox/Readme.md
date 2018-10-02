@@ -5,9 +5,9 @@
 O componente LteSmallBox provê uma caixa de informação de grande destaque, muito utilizada em dashboards.
 
 ```html
-<lte-small-box title="bookmarks" number="308" icon="fa-flag-o" bg-icon="green" text-botton="More info" url="#"/>
+<lte-small-box title="bookmarks" number="308" icon="fa-flag-o" bg="green" text-bottom="More info" url="#"/>
 ```
-<lte-small-box title="bookmarks" number="308" icon="fa-flag-o" bg-icon="green"  text-botton="More info" url=# />
+<lte-small-box title="bookmarks" number="308" icon="fa-flag-o" bg="green"  text-bottom="More info" url="#" />
 ### Ícones
 
 O componente tem uma propriedade obrigatória chamada _icon_, que utiliza ícons Font Awesome.

@@ -39,7 +39,7 @@ export default {
     const number = h('p', { }, [this.title])
     content.push(h('div', { class: 'inner' }, [title, number]))
     const iconFooter = h(LteFaIcon, { props: { type: 'fa-arrow-circle-right' } })
-    const linkFooter = h('a', { class: 'small-box-footer', attrs: { href: this.url } }, [`${this.textBotton} `, iconFooter])
+    const linkFooter = h('a', { class: 'small-box-footer', attrs: { href: this.url } }, [`${this.textBottom} `, iconFooter])
     content.push(divIcon)
     content.push(linkFooter)
     props.class = `bg-${this.bg}`
