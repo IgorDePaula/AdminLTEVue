@@ -8,6 +8,12 @@ import LteAlert from '../../src/components/Alert/Alert'
 import LteCallout from '../../src/components/Callout/Callout'
 import LteInfoBox from '../../src/components/InfoBox/InfoBox'
 import LteSmallBox from '../../src/components/SmallBox/SmallBox'
+import LteModal from '../../src/components/Modal/Modal'
+import LteBox from '../../src/components/Box/Box'
+import '../../src/assets/css/bootstrap/bootstrap.less'
+import '../../src/assets/css/font-awesome/less/font-awesome.less'
+
+import 'admin-lte/dist/css/AdminLTE.min.css'
 export default ({
                   Vue, // the version of Vue being used in the VuePress app
                   options, // the options for the root Vue instance
@@ -24,4 +30,6 @@ export default ({
   Vue.component(LteCallout.name, LteCallout)
   Vue.component(LteInfoBox.name, LteInfoBox)
   Vue.component(LteSmallBox.name, LteSmallBox)
+  Vue.component(LteModal.name, LteModal)
+  Vue.component(LteBox.name, LteBox)
 }

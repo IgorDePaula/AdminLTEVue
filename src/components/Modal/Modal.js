@@ -35,8 +35,7 @@ export default {
   },
   methods: {
     close (e) {
-      debugger
-      if(e.keyCode === 27){
+      if (e.keyCode === 27) {
         this.in = false
       }
     }

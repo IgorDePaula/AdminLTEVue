@@ -1,23 +1,19 @@
 <template>
   <div id="app">
     <h1 class="hello">Welcome to Your Vue.js App</h1>
-
-  <lte-modal title="teste de modal title" target="modal1" close-text="Fechar" open-text="Abrir modal" type="info">
-      teste de modal
-  </lte-modal>
-      <lte-modal title="teste de modal title" target="modal2" save-text="Salvar" close-text="Fechar" open-text="Abrir modal" type="warning">
-      teste de modal
-  </lte-modal>
+<lte-box title="extends"  :collapsable="true" :closeable="true"   >
+    teste da caixa
+</lte-box>
   </div>
 
 </template>
 
 <script>
-import LteModal from '../src/components/Modal/Modal'
+import LteBox from './components/Box/Box'
 export default {
   name: 'app',
   components: {
-    LteModal
+    LteBox
   },
   data () {
     return {

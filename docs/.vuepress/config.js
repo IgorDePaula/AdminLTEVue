@@ -31,7 +31,9 @@ module.exports = {
         ],
         sidebar: [
           '/',
-          '/LteAlert/','/LteCallout/',
+          '/LteAlert/',
+          '/LteBox/',
+          '/LteCallout/',
           {
             title: 'LteButton',
             collapsable: true,
@@ -51,6 +53,7 @@ module.exports = {
             ]
           },
           '/LteInfoBox/',
+          '/LteModal/',
           '/LteProgressBar/',
           '/LteSmallBox/'
         ],
@@ -67,7 +70,8 @@ module.exports = {
         ],
         sidebar: [
           '/',
-          '/LteAlert/','/LteCallout/',
+          '/LteAlert/',
+          '/LteCallout/',
           {
             title: 'LteButton',
             collapsable: true,
@@ -86,6 +90,7 @@ module.exports = {
             ]
           },
           '/LteInfoBox/',
+          '/LteModal/',
           '/LteProgressBar/',
           '/LteSmallBox/'
         ],
